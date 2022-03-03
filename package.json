@@ -1,0 +1,36 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon ./index.js",
+		"migrate": "knex migrate:latest --debug",
+		"basicSeed": "knex seed:run --specific=setup.js",
+		"rollback": "knex migrate:rollback",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint --quiet --ignore-path ../.gitignore .",
+		"lint:fix": "eslint --quiet --fix --ignore-path ../.gitignore ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"fs-jetpack": "^4.1.0",
+		"knex": "^0.95.4",
+		"mysql": "^2.18.1",
+		"pg": "^8.6.0",
+		"pg-hstore": "^2.3.4",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"eslint": "^7.4.0",
+		"eslint-config-aqua": "^3.0.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsdoc": "^30.7.8",
+		"nodemon": "^2.0.7"
+	}
+}
